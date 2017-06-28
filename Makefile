@@ -1,14 +1,12 @@
 #include moab/build/moab.make
 
 CC = g++
-MOAB_INCLUDES = -I/home/matthew/opt/moab/include
-MOAB_LIBS_LINK = -L/home/matthew/opt/moab/lib 
+MOAB_INCLUDES = -I/home/matt/opt/moab/include
+MOAB_LIBS_LINK = -L/home/matt/opt/moab/lib 
 
-#simpleSCD:
-#	$(CC) $(MOAB_INCLUDES) $(MOAB_LIBS_LINK) simpleSCD.cpp -o simpleSCD
 
-simpleSCD: simpleSCD.cpp
-	$(CC) $(MOAB_INCLUDES) $(MOAB_LIBS_LINK)  simpleSCD.cpp -lMOAB -o simpleSCD
+vtkWriter: vtkWriter.cpp
+	$(CC) $(MOAB_INCLUDES) $(MOAB_LIBS_LINK)  vtkWriter.cpp -lMOAB -o vtkWriter
 
 clean:
-	rm simpleSCD
+	rm vtkWriter
